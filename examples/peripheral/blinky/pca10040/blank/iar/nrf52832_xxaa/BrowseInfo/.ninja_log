@@ -1,0 +1,70 @@
+# ninja log v5
+0	199	7289948380000000	C:/work/github/test/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.xcl	4c4cf1d2c7232302
+222	279	7289948389930719	C:/work/github/test/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.pbi	8c386308ac45499c
+284	299	7289948390162986	C:/work/github/test/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbd	c2bb6eb8c6f1bff7
+305	649	7289948393497072	C:/work/github/test/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbw	4f7bbe9e56618f0b
+17	242	7289953600000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_util_platform.xcl	794b24fb8b818ab1
+2	275	7289953600000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_error_weak.xcl	9c50781d829f2415
+24	307	7289953600000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_error.xcl	5a1cf5a3a1d9e378
+30	340	7289953600000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_error_handler_iar.xcl	b573fd3f9bb7b3b7
+302	549	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_atomic.xcl	81429a0fe48dc414
+269	588	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Drivers/nrfx_atomic.xcl	e28c6d232ea9a0a2
+367	621	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_assert.xcl	e2aafbeded80445e
+335	654	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_balloc.xcl	fb526d4831501cfb
+582	790	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_memobj.xcl	e8268087e1e98116
+615	842	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_fprintf.xcl	584711b61d4eb77b
+649	872	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_fprintf_format.xcl	361a3efbca4cbcbc
+687	908	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/None/system_nrf52.xcl	1d80c47f42e7dea
+826	1054	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.xcl	6e02d94ab7d333e6
+943	1149	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Log/nrf_log_frontend.xcl	1f902939b3b77d0b
+902	1181	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_ringbuf.xcl	e3a5a4330c06ef94
+868	1212	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Board Definition/boards.xcl	73dcf25f7818fa72
+1084	1246	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Log/nrf_log_str_formatter.xcl	7fd4b3fc53dffef5
+1273	1423	7289953610000000	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_strerror.xcl	9127b28ea3068bfa
+1209	1488	7289953619634325	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/None/system_nrf52.pbi	95e23d020dc6a1b4
+1241	1512	7289953619891077	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Board Definition/boards.pbi	f9196a8b5dd5210
+1175	1573	7289953620494002	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.pbi	f6de5a804fc6e67b
+1453	1666	7289953621439754	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_assert.pbi	b888a9273a84da75
+1493	1719	7289953621956895	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_util_platform.pbi	4ee6ce05836f2bdb
+1517	1747	7289953622233005	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_atomic.pbi	f59a13829b27113a
+1578	1799	7289953622753746	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_error.pbi	70ec5fa924adeefc
+1671	1909	7289953623841730	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_error_handler_iar.pbi	3d833e81be6042f
+1724	1993	7289953624691572	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/app_error_weak.pbi	28485d7eace1dc26
+1752	2005	7289953624808889	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Drivers/nrfx_atomic.pbi	6629a2efa9920e55
+1804	2051	7289953625270781	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_fprintf_format.pbi	650581ca9da67f83
+1914	2142	7289953626186977	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Log/nrf_log_frontend.pbi	da3dda8934e309c1
+2010	2256	7289953627315831	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_memobj.pbi	8f78b31e06b45371
+1998	2335	7289953628121931	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_fprintf.pbi	36b8355c77c95e2c
+2148	2394	7289953628708351	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_balloc.pbi	c9ce436633193807
+2056	2412	7289953628878989	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_ringbuf.pbi	3fca97dc30eaf5e3
+2260	2502	7289953629780547	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Libraries/nrf_strerror.pbi	437149e0e0dc75af
+2340	2599	7289953630784870	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part0.pbi	27c237718e8a572c
+2399	2633	7289953631098172	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Log/nrf_log_str_formatter.pbi	fed74f526ab4e60e
+2417	2651	7289953631295073	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part2.pbi	9d819421eb95e875
+2507	2752	7289953632306346	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part3.pbi	e4512b16a4491905
+2638	2769	7289953632483593	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part4.pbi	16e1f8981421f87a
+2608	2844	7289953633231512	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part1.pbi	d9ad0e910b514bbe
+2857	3251	7289953637306380	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbd	e3c5fba66791e6a6
+3261	4744	7289953651528726	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbw	23cdfaad93471351
+5	257	7289953806674537	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.pbi	f6de5a804fc6e67b
+17	338	7289953807494399	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Board Definition/boards.pbi	f9196a8b5dd5210
+23	360	7289953807706243	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Drivers/nrfx_atomic.pbi	6629a2efa9920e55
+365	620	7289953810340517	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part0.pbi	27c237718e8a572c
+629	864	7289953812773781	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbd	e3c5fba66791e6a6
+876	2016	7289953823882668	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbw	23cdfaad93471351
+31	366	7289954586021750	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.pbi	f6de5a804fc6e67b
+7	377	7289954586135074	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Board Definition/boards.pbi	f9196a8b5dd5210
+36	421	7289954586582241	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Drivers/nrfx_atomic.pbi	6629a2efa9920e55
+425	659	7289954588963281	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part0.pbi	27c237718e8a572c
+670	973	7289954592112253	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbd	e3c5fba66791e6a6
+984	2329	7289954605193521	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbw	23cdfaad93471351
+3	226	7289954709527202	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.pbi	f6de5a804fc6e67b
+231	440	7289954711703133	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part0.pbi	27c237718e8a572c
+448	669	7289954713989278	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbd	e3c5fba66791e6a6
+688	1844	7289954725262331	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbw	23cdfaad93471351
+23	412	7289954881796251	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/nRF_Drivers/nrfx_atomic.pbi	6629a2efa9920e55
+17	429	7289954881956949	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Application/main.pbi	f6de5a804fc6e67b
+3	434	7289954881971326	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/Board Definition/boards.pbi	f9196a8b5dd5210
+440	706	7289954884770512	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040_part0.pbi	27c237718e8a572c
+714	970	7289954887416417	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbd	e3c5fba66791e6a6
+12	1331	7289957916469354	C:/work/github/test/examples/peripheral/blinky/pca10040/blank/iar/nrf52832_xxaa/BrowseInfo/blinky_pca10040.pbw	23cdfaad93471351
