@@ -70,8 +70,6 @@ int main(void)
             nrf_delay_ms(500);
         }
     }
-	
-	/*testOK*/
 }
 
 /**
