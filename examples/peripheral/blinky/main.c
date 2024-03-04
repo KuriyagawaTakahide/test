@@ -70,7 +70,6 @@ int main(void)
             nrf_delay_ms(500);
         }
     }
-	err_okiruyo
 	// TEST Comment Add
 	// ADD !!!!!!!!!!!!!!!!!!!!1s
 }
