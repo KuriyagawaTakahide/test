@@ -1,0 +1,16 @@
+﻿*.xcl
+*.o
+*.hex
+*.map
+*.out
+*.dep
+*.ninja_deps
+*.ninja_log
+*.pbi
+*.pbd
+*.browse
+*.pbw
+*.ninja
+examples/peripheral/blinky/pca10040/blank/iar/settings/blinky_pca10040.nrf52832_xxaa.cspy.bat
+examples/peripheral/blinky/pca10040/blank/iar/settings/blinky_pca10040.nrf52832_xxaa.cspy.ps1
+examples/peripheral/blinky/settings/blinky.wsdt
