@@ -711,7 +711,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>0</hasPrio>
+                <hasPrio>192</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>
