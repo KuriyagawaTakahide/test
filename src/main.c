@@ -52,6 +52,7 @@
 #include <stdint.h>
 #include "nrf_delay.h"
 #include "boards.h"
+#include "method.h"
 
 /**
  * @brief Function for application main entry.
@@ -70,6 +71,7 @@ int main(void)
             nrf_delay_ms(500);
         }
     }
+	method(1,2);
 	// TEST Comment Add
 	// ADD !!!!!!!!!!!!!!!!!!!!1s
 }

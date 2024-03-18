@@ -1,0 +1,364 @@
+フォルダー パスの一覧:  ボリューム Windows
+ボリューム シリアル番号は 00003B11 9006:03FF です
+C:\WORK\GITHUB
+│  .gitignore
+│  blinky.eww
+│  license.txt
+│  nRF_MDK_8_40_3_IAR_BSDLicense.msi
+│  project.yml
+│  tree.txt
+│  
+├─pca10040
+│  └─blank
+│      ├─config
+│      │      sdk_config.h
+│      │      
+│      └─iar
+│          │  blinky_iar_nRF5x.icf
+│          │  blinky_pca10040.dep
+│          │  blinky_pca10040.ewd
+│          │  blinky_pca10040.ewp
+│          │  blinky_pca10040.ewt
+│          │  
+│          ├─nrf52832_xxaa
+│          │      .ninja_deps
+│          │      .ninja_log
+│          │      
+│          ├─settings
+│          │      blinky_pca10040.crun
+│          │      blinky_pca10040.dbgdt
+│          │      blinky_pca10040.dnx
+│          │      blinky_pca10040.nrf52832_xxaa.cspy.bat
+│          │      blinky_pca10040.nrf52832_xxaa.cspy.ps1
+│          │      blinky_pca10040.nrf52832_xxaa.driver.xcl
+│          │      blinky_pca10040.nrf52832_xxaa.general.xcl
+│          │      
+│          └─_build
+│              ├─Application
+│              ├─Board Definition
+│              ├─None
+│              ├─nRF_Drivers
+│              ├─nRF_Libraries
+│              └─nRF_Log
+├─settings
+│      blinky.wsdt
+│      
+├─src
+│  │  main.c
+│  │  method.c
+│  │  method.h
+│  │  
+│  ├─components
+│  │  │  sdk_validation.h
+│  │  │  
+│  │  ├─boards
+│  │  │      boards.c
+│  │  │      boards.h
+│  │  │      pca10040.h
+│  │  │      
+│  │  ├─drivers_nrf
+│  │  │  └─nrf_soc_nosd
+│  │  │          nrf_error.h
+│  │  │          
+│  │  ├─libraries
+│  │  │  ├─atomic
+│  │  │  │      nrf_atomic.c
+│  │  │  │      nrf_atomic.h
+│  │  │  │      nrf_atomic_internal.h
+│  │  │  │      nrf_atomic_sanity_check.h
+│  │  │  │      
+│  │  │  ├─balloc
+│  │  │  │      nrf_balloc.c
+│  │  │  │      nrf_balloc.h
+│  │  │  │      
+│  │  │  ├─delay
+│  │  │  │      nrf_delay.h
+│  │  │  │      
+│  │  │  ├─experimental_section_vars
+│  │  │  │      nrf_section.h
+│  │  │  │      
+│  │  │  ├─log
+│  │  │  │  │  nrf_log.h
+│  │  │  │  │  nrf_log_backend_interface.h
+│  │  │  │  │  nrf_log_ctrl.h
+│  │  │  │  │  nrf_log_instance.h
+│  │  │  │  │  nrf_log_str_formatter.h
+│  │  │  │  │  nrf_log_types.h
+│  │  │  │  │  
+│  │  │  │  └─src
+│  │  │  │          nrf_log_ctrl_internal.h
+│  │  │  │          nrf_log_frontend.c
+│  │  │  │          nrf_log_internal.h
+│  │  │  │          nrf_log_str_formatter.c
+│  │  │  │          
+│  │  │  ├─memobj
+│  │  │  │      nrf_memobj.c
+│  │  │  │      nrf_memobj.h
+│  │  │  │      
+│  │  │  ├─ringbuf
+│  │  │  │      nrf_ringbuf.c
+│  │  │  │      nrf_ringbuf.h
+│  │  │  │      
+│  │  │  ├─strerror
+│  │  │  │      nrf_strerror.c
+│  │  │  │      nrf_strerror.h
+│  │  │  │      
+│  │  │  └─util
+│  │  │          app_error.c
+│  │  │          app_error.h
+│  │  │          app_error_handler_iar.c
+│  │  │          app_error_weak.c
+│  │  │          app_error_weak.h
+│  │  │          app_util.h
+│  │  │          app_util_platform.c
+│  │  │          app_util_platform.h
+│  │  │          nordic_common.h
+│  │  │          nrf_assert.c
+│  │  │          nrf_assert.h
+│  │  │          sdk_alloca.h
+│  │  │          sdk_common.h
+│  │  │          sdk_errors.h
+│  │  │          sdk_macros.h
+│  │  │          sdk_mapped_flags.c
+│  │  │          sdk_mapped_flags.h
+│  │  │          sdk_os.h
+│  │  │          sdk_resources.h
+│  │  │          
+│  │  └─toolchain
+│  │      └─cmsis
+│  │          └─include
+│  │                  cmsis_compiler.h
+│  │                  cmsis_iccarm.h
+│  │                  cmsis_version.h
+│  │                  core_cm4.h
+│  │                  mpu_armv7.h
+│  │                  
+│  ├─external
+│  │  └─fprintf
+│  │          nrf_fprintf.c
+│  │          nrf_fprintf.h
+│  │          nrf_fprintf_format.c
+│  │          nrf_fprintf_format.h
+│  │          
+│  ├─integration
+│  │  └─nrfx
+│  │      │  nrfx_config.h
+│  │      │  nrfx_glue.h
+│  │      │  nrfx_log.h
+│  │      │  
+│  │      └─legacy
+│  │              apply_old_config.h
+│  │              nrf_drv_clock.c
+│  │              nrf_drv_clock.h
+│  │              nrf_drv_common.h
+│  │              nrf_drv_comp.h
+│  │              nrf_drv_gpiote.h
+│  │              nrf_drv_i2s.h
+│  │              nrf_drv_lpcomp.h
+│  │              nrf_drv_pdm.h
+│  │              nrf_drv_power.c
+│  │              nrf_drv_power.h
+│  │              nrf_drv_ppi.c
+│  │              nrf_drv_ppi.h
+│  │              nrf_drv_pwm.h
+│  │              nrf_drv_qdec.h
+│  │              nrf_drv_qspi.h
+│  │              nrf_drv_rng.c
+│  │              nrf_drv_rng.h
+│  │              nrf_drv_rtc.h
+│  │              nrf_drv_saadc.h
+│  │              nrf_drv_spi.c
+│  │              nrf_drv_spi.h
+│  │              nrf_drv_spis.c
+│  │              nrf_drv_spis.h
+│  │              nrf_drv_swi.c
+│  │              nrf_drv_swi.h
+│  │              nrf_drv_systick.h
+│  │              nrf_drv_timer.h
+│  │              nrf_drv_twi.c
+│  │              nrf_drv_twi.h
+│  │              nrf_drv_twis.h
+│  │              nrf_drv_uart.c
+│  │              nrf_drv_uart.h
+│  │              nrf_drv_usbd.h
+│  │              nrf_drv_usbd_errata.h
+│  │              nrf_drv_wdt.h
+│  │              
+│  └─modules
+│      └─nrfx
+│          │  CHANGELOG.md
+│          │  LICENSE
+│          │  nrfx.h
+│          │  README.md
+│          │  
+│          ├─drivers
+│          │  │  nrfx_common.h
+│          │  │  nrfx_errors.h
+│          │  │  
+│          │  ├─include
+│          │  │      nrfx_adc.h
+│          │  │      nrfx_clock.h
+│          │  │      nrfx_comp.h
+│          │  │      nrfx_dppi.h
+│          │  │      nrfx_gpiote.h
+│          │  │      nrfx_i2s.h
+│          │  │      nrfx_lpcomp.h
+│          │  │      nrfx_nfct.h
+│          │  │      nrfx_nvmc.h
+│          │  │      nrfx_pdm.h
+│          │  │      nrfx_power.h
+│          │  │      nrfx_power_clock.h
+│          │  │      nrfx_ppi.h
+│          │  │      nrfx_pwm.h
+│          │  │      nrfx_qdec.h
+│          │  │      nrfx_qspi.h
+│          │  │      nrfx_rng.h
+│          │  │      nrfx_rtc.h
+│          │  │      nrfx_saadc.h
+│          │  │      nrfx_saadc_v2.h
+│          │  │      nrfx_spi.h
+│          │  │      nrfx_spim.h
+│          │  │      nrfx_spis.h
+│          │  │      nrfx_swi.h
+│          │  │      nrfx_systick.h
+│          │  │      nrfx_temp.h
+│          │  │      nrfx_timer.h
+│          │  │      nrfx_twi.h
+│          │  │      nrfx_twim.h
+│          │  │      nrfx_twis.h
+│          │  │      nrfx_twi_twim.h
+│          │  │      nrfx_uart.h
+│          │  │      nrfx_uarte.h
+│          │  │      nrfx_usbd.h
+│          │  │      nrfx_wdt.h
+│          │  │      nrf_bitmask.h
+│          │  │      
+│          │  └─src
+│          │      │  nrfx_adc.c
+│          │      │  nrfx_clock.c
+│          │      │  nrfx_comp.c
+│          │      │  nrfx_dppi.c
+│          │      │  nrfx_gpiote.c
+│          │      │  nrfx_i2s.c
+│          │      │  nrfx_lpcomp.c
+│          │      │  nrfx_nfct.c
+│          │      │  nrfx_nvmc.c
+│          │      │  nrfx_pdm.c
+│          │      │  nrfx_power.c
+│          │      │  nrfx_ppi.c
+│          │      │  nrfx_pwm.c
+│          │      │  nrfx_qdec.c
+│          │      │  nrfx_qspi.c
+│          │      │  nrfx_rng.c
+│          │      │  nrfx_rtc.c
+│          │      │  nrfx_saadc.c
+│          │      │  nrfx_spi.c
+│          │      │  nrfx_spim.c
+│          │      │  nrfx_spis.c
+│          │      │  nrfx_swi.c
+│          │      │  nrfx_systick.c
+│          │      │  nrfx_temp.c
+│          │      │  nrfx_timer.c
+│          │      │  nrfx_twi.c
+│          │      │  nrfx_twim.c
+│          │      │  nrfx_twis.c
+│          │      │  nrfx_twi_twim.c
+│          │      │  nrfx_uart.c
+│          │      │  nrfx_uarte.c
+│          │      │  nrfx_usbd.c
+│          │      │  nrfx_usbd_errata.h
+│          │      │  nrfx_wdt.c
+│          │      │  
+│          │      └─prs
+│          │              nrfx_prs.c
+│          │              nrfx_prs.h
+│          │              
+│          ├─hal
+│          │      nrf_aar.h
+│          │      nrf_acl.h
+│          │      nrf_adc.h
+│          │      nrf_bprot.h
+│          │      nrf_ccm.h
+│          │      nrf_clock.h
+│          │      nrf_comp.h
+│          │      nrf_dppi.h
+│          │      nrf_ecb.c
+│          │      nrf_ecb.h
+│          │      nrf_egu.h
+│          │      nrf_ficr.h
+│          │      nrf_gpio.h
+│          │      nrf_gpiote.h
+│          │      nrf_i2s.h
+│          │      nrf_kmu.h
+│          │      nrf_lpcomp.h
+│          │      nrf_mpu.h
+│          │      nrf_mwu.h
+│          │      nrf_nfct.h
+│          │      nrf_nvmc.c
+│          │      nrf_nvmc.h
+│          │      nrf_pdm.h
+│          │      nrf_power.h
+│          │      nrf_ppi.h
+│          │      nrf_pwm.h
+│          │      nrf_qdec.h
+│          │      nrf_qspi.h
+│          │      nrf_radio.h
+│          │      nrf_regulators.h
+│          │      nrf_rng.h
+│          │      nrf_rtc.h
+│          │      nrf_saadc.h
+│          │      nrf_spi.h
+│          │      nrf_spim.h
+│          │      nrf_spis.h
+│          │      nrf_spu.h
+│          │      nrf_systick.h
+│          │      nrf_temp.h
+│          │      nrf_timer.h
+│          │      nrf_twi.h
+│          │      nrf_twim.h
+│          │      nrf_twis.h
+│          │      nrf_uart.h
+│          │      nrf_uarte.h
+│          │      nrf_usbd.h
+│          │      nrf_vmc.h
+│          │      nrf_wdt.h
+│          │      
+│          ├─mdk
+│          │      compiler_abstraction.h
+│          │      iar_startup_nrf52.s
+│          │      nrf.h
+│          │      nrf51_to_nrf52.h
+│          │      nrf52.h
+│          │      nrf52.svd
+│          │      nrf52832_peripherals.h
+│          │      nrf52832_xxaa.ld
+│          │      nrf52832_xxab.ld
+│          │      nrf52_bitfields.h
+│          │      nrf52_common.ld
+│          │      nrf52_erratas.h
+│          │      nrf52_name_change.h
+│          │      nrf52_to_nrf52833.h
+│          │      nrf52_xxaa.ld
+│          │      nrf_common.ld
+│          │      nrf_erratas.h
+│          │      nrf_peripherals.h
+│          │      startup_config.h
+│          │      system_nrf.h
+│          │      system_nrf52.c
+│          │      system_nrf52.h
+│          │      system_nrf52_approtect.h
+│          │      
+│          └─soc
+│                  nrfx_atomic.c
+│                  nrfx_atomic.h
+│                  nrfx_atomic_internal.h
+│                  nrfx_coredep.h
+│                  nrfx_irqs.h
+│                  nrfx_irqs_nrf52832.h
+│                  
+└─test
+    │  test_method.c
+    │  
+    └─support
+            .gitkeep
+            
