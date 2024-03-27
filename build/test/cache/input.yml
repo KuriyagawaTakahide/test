@@ -24,9 +24,12 @@
 :paths:
   :test:
   - "+:test/**"
+  - "+:test/components/boards/**"
+  - "+:test/components/libraries/strerror/**"
   - "-:test/support"
   :source:
   - src/**
+  - src/components/libraries/strerror/nrf_strerror.c
   :support:
   - test/support
   :include: []
@@ -43,6 +46,7 @@
 - :rake_columns: '120'
 - :path: C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\bin;C:\Program Files\IAR
     Systems\Embedded Workbench 9.0\common\bin;
+- :executable: C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\iarbuild.exe
 :defines:
   :test:
   - &1 []
@@ -84,19 +88,30 @@
 :cmock:
   :vendor_path: C:/work/github/vendor/ceedling/vendor
   :defines: []
-  :includes: []
+  :includes:
+  - cmsis_iccarm.h
   :mock_prefix: mock_
   :when_no_prototypes: :warn
   :enforce_strict_ordering: true
+  :cexception_include:
   :plugins:
   - :ignore
   - :callback
+  - :array
+  - :ignore_arg
+  - :expect_any_args
+  - :return_thru_ptr
   :treat_as:
-    uint8: HEX8
-    uint16: HEX16
-    uint32: UINT32
-    int8: INT8
+    uint8_t: HEX8
+    uint16_t: HEX16
+    uint32_t: UINT32
+    int8_t: INT8
     bool: UINT8
+  :treat_inline: include
+  :includes_h_pre_orig_header:
+  - cmsis_iccarm.h
+  :includes_c_pre_header:
+  - cmsis_iccarm.h
   :mock_path: build/test/mocks
   :verbosity: 3
   :unity_helper: false
@@ -112,6 +127,13 @@
     :name: IAR test compiler
     :arguments:
     - "-D _DLIB_FILE_DESCRIPTOR=1"
+    - "-D NRF52832_XXAA"
+    - "-D BOARD_PCA10040"
+    - "-D BSP_DEFINES_ONLY"
+    - "-D CONFIG_GPIO_AS_PINRESET"
+    - "-D FLOAT_ABI_HARD"
+    - "-D NRF52"
+    - "-D NRF52_PAN_74"
     - "--debug"
     - "--endian=little"
     - "--cpu=Cortex-M4"
@@ -154,8 +176,7 @@
     - "--backend -B"
     - "--endian=little"
     - "--cpu=Cortex-M4"
-    - "--drv_vector_table_base=0x0"
-    - "--fpu=VFPv4_SP"
+    - "--fpu=VFPv4_sp"
     - "--semihosting"
     :stderr_redirect: :none
     :background_exec: :none

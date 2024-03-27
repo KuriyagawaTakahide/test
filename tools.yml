@@ -1,0 +1,60 @@
+---
+:tools_test_compiler:
+  :executable: iccarm
+  :name: IAR test compiler
+  :arguments:
+  - "-D _DLIB_FILE_DESCRIPTOR=1"
+  - "-D NRF52832_XXAA"
+  - "-D BOARD_PCA10040"
+  - "-D BSP_DEFINES_ONLY"
+  - "-D CONFIG_GPIO_AS_PINRESET"
+  - "-D FLOAT_ABI_HARD"
+  - "-D NRF52"
+  - "-D NRF52_PAN_74"
+  - "--debug"
+  - "--endian=little"
+  - "--cpu=Cortex-M4"
+  - "-e"
+  - "--fpu=VFPv4_SP"
+  - "-Ol"
+  - --preprocess "build/test/list"
+  - --dlib_config "C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\DLib_Config_Normal.h"
+  - -I"$": COLLECTION_PATHS_TEST_TOOLCHAIN_INCLUDE
+  - -I"$": COLLECTION_PATHS_TEST_SUPPORT_SOURCE_INCLUDE_VENDOR
+  - -o "${2}"
+  - "--diag_suppress=Pa050"
+  - '"${1}"'
+  :stderr_redirect: :none
+  :background_exec: :none
+  :optional: false
+:tools_test_linker:
+  :executable: ilinkarm
+  :name: IAR test linker
+  :arguments:
+  - "--vfe"
+  - "--redirect _Printf=_PrintfFull"
+  - "--redirect _Scanf=_ScanfFull"
+  - "--semihosting"
+  - --config "C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\config\generic_cortex.icf"
+  - --map "pca10040\blank\iar\_build\blinky_pca10040.map"
+  - -o "${2}"
+  - '"${1}"'
+  :stderr_redirect: :none
+  :background_exec: :none
+  :optional: false
+:tools_test_fixture:
+  :executable: cspybat
+  :name: CSpyBat test runner
+  :arguments:
+  - '"C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\bin\armproc.dll"'
+  - '"C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\bin\armsim2.dll"'
+  - '"${1}"'
+  - --plugin "C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\bin\armbat.dll"
+  - "--backend -B"
+  - "--endian=little"
+  - "--cpu=Cortex-M4"
+  - "--fpu=VFPv4_sp"
+  - "--semihosting"
+  :stderr_redirect: :none
+  :background_exec: :none
+  :optional: false

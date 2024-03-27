@@ -365,13 +365,12 @@
                     <state>$PROJ_DIR$\..\..\..\src\components\libraries\strerror</state>
                     <state>$PROJ_DIR$\..\..\..\src\components\libraries\util</state>
                     <state>$PROJ_DIR$\..\..\..\src\components\toolchain\cmsis\include</state>
-                    <state>$PROJ_DIR$\..\..\..</state>
+                    <state>$PROJ_DIR$\..\..\..\src</state>
                     <state>$PROJ_DIR$\..\..\..\src\external\fprintf</state>
                     <state>$PROJ_DIR$\..\..\..\src\integration\nrfx</state>
                     <state>$PROJ_DIR$\..\..\..\src\modules\nrfx</state>
                     <state>$PROJ_DIR$\..\..\..\src\modules\nrfx\hal</state>
                     <state>$PROJ_DIR$.\..\..\..\src\modules\nrfx\mdk</state>
-                    <state>$PROJ_DIR$\..\config</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -710,7 +709,7 @@
             <data>
                 <extensions></extensions>
                 <cmdline></cmdline>
-                <hasPrio>192</hasPrio>
+                <hasPrio>1</hasPrio>
                 <buildSequence>inputOutputBased</buildSequence>
             </data>
         </settings>

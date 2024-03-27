@@ -23,6 +23,8 @@
     - 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\bin'
     - 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin'
     - #{ENV['PATH']}
+  - :executable:
+    - 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\iarbuild.exe'
 
 :extension:
   :executable: .out
@@ -30,6 +32,7 @@
 :paths:
   :test:
     - +:test/**
+    - +:test/components/boards/**
     - +:test/components/libraries/strerror/**
     - -:test/support
   :source:
@@ -52,16 +55,28 @@
   :mock_prefix: mock_
   :when_no_prototypes: :warn
   :enforce_strict_ordering: TRUE
+  :cexception_include:
   :plugins:
     - :ignore
     - :callback
+    - :array
+    - :ignore_arg
+    - :expect_any_args
+    - :return_thru_ptr
   :treat_as:
-    uint8:    HEX8
-    uint16:   HEX16
-    uint32:   UINT32
-    int8:     INT8
+    uint8_t:    HEX8
+    uint16_t:   HEX16
+    uint32_t:   UINT32
+    int8_t:     INT8
     bool:     UINT8
-
+  :treat_inline: include
+  :includes:
+    - cmsis_iccarm.h
+  :includes_h_pre_orig_header: 
+    - cmsis_iccarm.h
+  :includes_c_pre_header: 
+    - cmsis_iccarm.h
+  
 :tools:
   :test_compiler:
     :executable: iccarm
@@ -69,6 +84,13 @@
     :arguments:
       - -D _DLIB_FILE_DESCRIPTOR=1
       - -D NRF52832_XXAA
+      - -D BOARD_PCA10040
+      - -D BSP_DEFINES_ONLY
+      - -D CONFIG_GPIO_AS_PINRESET
+      - -D FLOAT_ABI_HARD
+      - -D NRF52
+      - -D NRF52832_XXAA
+      - -D NRF52_PAN_74
       - --debug
       - --endian=little 
       - --cpu=Cortex-M4 
@@ -106,9 +128,8 @@
       - --plugin "C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\bin\armbat.dll"
       - --backend -B
       - --endian=little
-      - --cpu=Cortex-M4 
-      - --drv_vector_table_base=0x0 
-      - --fpu=VFPv4_SP 
+      - --cpu=Cortex-M4
+      - --fpu=VFPv4_sp
       - --semihosting
 
 # LIBRARIES
@@ -129,4 +150,5 @@
   :enabled:
     - stdout_pretty_tests_report
     - module_generator
+
 ...
