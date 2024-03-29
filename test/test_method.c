@@ -23,7 +23,9 @@ void test_math_all(void)
 
 void test_add(void)
 {
-	TEST_ASSERT_EQUAL_INT(34, add(20, 3));
+//	TEST_ASSERT_EQUAL_INT(34, add(20, 3));
+	// Failed test
+	TEST_ASSERT_EQUAL_INT(10, add(20, 3));
 }
 
 void test_sub(void)
