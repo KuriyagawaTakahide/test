@@ -14,10 +14,6 @@
   :release_build: false
   :use_auxiliary_dependencies: true
   :build_root: build
-  :which_ceedling: gem
-  :ceedling_version: 0.31.1
-  :default_tasks:
-  - test:all
 :release_build:
   :use_assembly: false
   :artifacts: []
@@ -76,7 +72,7 @@
   :libraries:
   - ".a"
   - ".so"
-  :executable: ".out"
+  :executable: ".exe"
   :map: ".map"
   :list: ".lst"
   :testpass: ".pass"
@@ -88,14 +84,13 @@
 :cmock:
   :vendor_path: C:/work/github/vendor/ceedling/vendor
   :defines: []
-  :includes:
-  - cmsis_iccarm.h
+  :includes: []
   :mock_prefix: mock_
   :when_no_prototypes: :warn
   :enforce_strict_ordering: true
   :cexception_include:
   :plugins:
-  - :ignore
+  - :ignore_stateless
   - :callback
   - :array
   - :ignore_arg
@@ -107,11 +102,6 @@
     uint32_t: UINT32
     int8_t: INT8
     bool: UINT8
-  :treat_inline: include
-  :includes_h_pre_orig_header:
-  - cmsis_iccarm.h
-  :includes_c_pre_header:
-  - cmsis_iccarm.h
   :mock_path: build/test/mocks
   :verbosity: 3
   :unity_helper: false

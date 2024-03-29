@@ -1,18 +1,69 @@
 フォルダー パスの一覧:  ボリューム Windows
-ボリューム シリアル番号は 00003B11 9006:03FF です
-C:\WORK\GITHUB
+ボリューム シリアル番号は 9006-03FF です
+C:.
 │  .gitignore
 │  blinky.eww
+│  ceedling.cmd
 │  license.txt
 │  nRF_MDK_8_40_3_IAR_BSDLicense.msi
 │  project.yml
+│  rakefile.rb
 │  tree.txt
 │  
+├─build
+│  ├─artifacts
+│  │  └─test
+│  ├─logs
+│  ├─temp
+│  └─test
+│      │  list.i
+│      │  
+│      ├─cache
+│      │      defines_dependency.yml
+│      │      input.yml
+│      │      
+│      ├─dependencies
+│      ├─mocks
+│      │      mock_dose_something.c
+│      │      mock_dose_something.h
+│      │      
+│      ├─out
+│      ├─results
+│      └─runners
+│              test_method_runner.c
+│              test_nrf_strerror_runner.c
+│              
+├─docs
+│      CeedlingPacket.md
+│      CeedlingUpgrade.md
+│      CMock_Summary.md
+│      plugin_beep.md
+│      plugin_bullseye.md
+│      plugin_colour_report.md
+│      plugin_command_hooks.md
+│      plugin_compile_commands_json.md
+│      plugin_dependencies.md
+│      plugin_fake_function_framework.md
+│      plugin_gcov.md
+│      plugin_json_tests_report.md
+│      plugin_junit_tests_report.md
+│      plugin_module_generator.md
+│      plugin_raw_output_report.md
+│      plugin_stdout_gtestlike_tests_report.md
+│      plugin_stdout_ide_tests_report.md
+│      plugin_stdout_pretty_tests_report.md
+│      plugin_subprojects.md
+│      plugin_teamcity_tests_report.md
+│      plugin_warnings_report.md
+│      plugin_xml_tests_report.md
+│      ThrowTheSwitchCodingStandard.md
+│      UnityAssertionsReference.md
+│      UnityConfigurationGuide.md
+│      UnityGettingStartedGuide.md
+│      UnityHelperScriptsGuide.md
+│      
 ├─pca10040
 │  └─blank
-│      ├─config
-│      │      sdk_config.h
-│      │      
 │      └─iar
 │          │  blinky_iar_nRF5x.icf
 │          │  blinky_pca10040.dep
@@ -21,9 +72,91 @@ C:\WORK\GITHUB
 │          │  blinky_pca10040.ewt
 │          │  
 │          ├─nrf52832_xxaa
-│          │      .ninja_deps
-│          │      .ninja_log
-│          │      
+│          │  │  .ninja_deps
+│          │  │  .ninja_log
+│          │  │  
+│          │  └─BrowseInfo
+│          │      │  .ninja_deps
+│          │      │  .ninja_log
+│          │      │  blinky_pca10040.pbd
+│          │      │  blinky_pca10040.pbd.browse
+│          │      │  blinky_pca10040.pbw
+│          │      │  blinky_pca10040_part0.pbi
+│          │      │  blinky_pca10040_part1.pbi
+│          │      │  blinky_pca10040_part2.pbi
+│          │      │  blinky_pca10040_part3.pbi
+│          │      │  blinky_pca10040_part4.pbi
+│          │      │  build.ninja
+│          │      │  
+│          │      ├─Application
+│          │      │      main.pbi
+│          │      │      main.pbi.dep
+│          │      │      main.xcl
+│          │      │      method.pbi
+│          │      │      method.pbi.dep
+│          │      │      method.xcl
+│          │      │      
+│          │      ├─Board Definition
+│          │      │      boards.pbi
+│          │      │      boards.pbi.dep
+│          │      │      boards.xcl
+│          │      │      
+│          │      ├─None
+│          │      │      system_nrf52.pbi
+│          │      │      system_nrf52.pbi.dep
+│          │      │      system_nrf52.xcl
+│          │      │      
+│          │      ├─nRF_Drivers
+│          │      │      nrfx_atomic.pbi
+│          │      │      nrfx_atomic.pbi.dep
+│          │      │      nrfx_atomic.xcl
+│          │      │      
+│          │      ├─nRF_Libraries
+│          │      │      app_error.pbi
+│          │      │      app_error.pbi.dep
+│          │      │      app_error.xcl
+│          │      │      app_error_handler_iar.pbi
+│          │      │      app_error_handler_iar.pbi.dep
+│          │      │      app_error_handler_iar.xcl
+│          │      │      app_error_weak.pbi
+│          │      │      app_error_weak.pbi.dep
+│          │      │      app_error_weak.xcl
+│          │      │      app_util_platform.pbi
+│          │      │      app_util_platform.pbi.dep
+│          │      │      app_util_platform.xcl
+│          │      │      nrf_assert.pbi
+│          │      │      nrf_assert.pbi.dep
+│          │      │      nrf_assert.xcl
+│          │      │      nrf_atomic.pbi
+│          │      │      nrf_atomic.pbi.dep
+│          │      │      nrf_atomic.xcl
+│          │      │      nrf_balloc.pbi
+│          │      │      nrf_balloc.pbi.dep
+│          │      │      nrf_balloc.xcl
+│          │      │      nrf_fprintf.pbi
+│          │      │      nrf_fprintf.pbi.dep
+│          │      │      nrf_fprintf.xcl
+│          │      │      nrf_fprintf_format.pbi
+│          │      │      nrf_fprintf_format.pbi.dep
+│          │      │      nrf_fprintf_format.xcl
+│          │      │      nrf_memobj.pbi
+│          │      │      nrf_memobj.pbi.dep
+│          │      │      nrf_memobj.xcl
+│          │      │      nrf_ringbuf.pbi
+│          │      │      nrf_ringbuf.pbi.dep
+│          │      │      nrf_ringbuf.xcl
+│          │      │      nrf_strerror.pbi
+│          │      │      nrf_strerror.pbi.dep
+│          │      │      nrf_strerror.xcl
+│          │      │      
+│          │      └─nRF_Log
+│          │              nrf_log_frontend.pbi
+│          │              nrf_log_frontend.pbi.dep
+│          │              nrf_log_frontend.xcl
+│          │              nrf_log_str_formatter.pbi
+│          │              nrf_log_str_formatter.pbi.dep
+│          │              nrf_log_str_formatter.xcl
+│          │              
 │          ├─settings
 │          │      blinky_pca10040.crun
 │          │      blinky_pca10040.dbgdt
@@ -34,19 +167,27 @@ C:\WORK\GITHUB
 │          │      blinky_pca10040.nrf52832_xxaa.general.xcl
 │          │      
 │          └─_build
+│              │  blinky_pca10040.map
+│              │  
 │              ├─Application
 │              ├─Board Definition
 │              ├─None
 │              ├─nRF_Drivers
 │              ├─nRF_Libraries
-│              └─nRF_Log
+│              ├─nRF_Log
+│              └─Test
+│                      test_method.o.rsp
+│                      
 ├─settings
 │      blinky.wsdt
 │      
 ├─src
+│  │  dose_something.c
+│  │  dose_something.h
 │  │  main.c
 │  │  method.c
 │  │  method.h
+│  │  type_struct.h
 │  │  
 │  ├─components
 │  │  │  sdk_validation.h
@@ -133,6 +274,9 @@ C:\WORK\GITHUB
 │  │                  core_cm4.h
 │  │                  mpu_armv7.h
 │  │                  
+│  ├─config
+│  │      sdk_config.h
+│  │      
 │  ├─external
 │  │  └─fprintf
 │  │          nrf_fprintf.c
@@ -356,9 +500,367 @@ C:\WORK\GITHUB
 │                  nrfx_irqs.h
 │                  nrfx_irqs_nrf52832.h
 │                  
-└─test
-    │  test_method.c
-    │  
-    └─support
-            .gitkeep
-            
+├─test
+│  │  test_method.c
+│  │  
+│  ├─components
+│  │  ├─boards
+│  │  └─libraries
+│  │      └─strerror
+│  │              test_nrf_strerror.c
+│  │              
+│  └─support
+│          .gitkeep
+│          
+└─vendor
+    └─ceedling
+        ├─bin
+        │      ceedling
+        │      
+        ├─lib
+        │  │  ceedling.rb
+        │  │  
+        │  └─ceedling
+        │          build_invoker_utils.rb
+        │          cacheinator.rb
+        │          cacheinator_helper.rb
+        │          cmock_builder.rb
+        │          configurator.rb
+        │          configurator_builder.rb
+        │          configurator_plugins.rb
+        │          configurator_setup.rb
+        │          configurator_validator.rb
+        │          constants.rb
+        │          defaults.rb
+        │          dependinator.rb
+        │          erb_wrapper.rb
+        │          file_finder.rb
+        │          file_finder_helper.rb
+        │          file_path_utils.rb
+        │          file_system_utils.rb
+        │          file_system_wrapper.rb
+        │          file_wrapper.rb
+        │          flaginator.rb
+        │          generator.rb
+        │          generator_helper.rb
+        │          generator_test_results.rb
+        │          generator_test_results_sanity_checker.rb
+        │          generator_test_runner.rb
+        │          loginator.rb
+        │          makefile.rb
+        │          objects.yml
+        │          par_map.rb
+        │          plugin.rb
+        │          plugin_builder.rb
+        │          plugin_manager.rb
+        │          plugin_manager_helper.rb
+        │          plugin_reportinator.rb
+        │          plugin_reportinator_helper.rb
+        │          preprocessinator.rb
+        │          preprocessinator_extractor.rb
+        │          preprocessinator_file_handler.rb
+        │          preprocessinator_helper.rb
+        │          preprocessinator_includes_handler.rb
+        │          project_config_manager.rb
+        │          project_file_loader.rb
+        │          rakefile.rb
+        │          rake_utils.rb
+        │          rake_wrapper.rb
+        │          release_invoker.rb
+        │          release_invoker_helper.rb
+        │          reportinator.rb
+        │          rules_cmock.rake
+        │          rules_preprocess.rake
+        │          rules_release.rake
+        │          rules_release_deep_dependencies.rake
+        │          rules_tests.rake
+        │          rules_tests_deep_dependencies.rake
+        │          setupinator.rb
+        │          streaminator.rb
+        │          streaminator_helper.rb
+        │          stream_wrapper.rb
+        │          system_utils.rb
+        │          system_wrapper.rb
+        │          target_loader.rb
+        │          tasks_base.rake
+        │          tasks_filesystem.rake
+        │          tasks_release.rake
+        │          tasks_release_deep_dependencies.rake
+        │          tasks_tests.rake
+        │          tasks_tests_deep_dependencies.rake
+        │          tasks_vendor.rake
+        │          task_invoker.rb
+        │          test_includes_extractor.rb
+        │          test_invoker.rb
+        │          test_invoker_helper.rb
+        │          tool_executor.rb
+        │          tool_executor_helper.rb
+        │          verbosinator.rb
+        │          version.rb
+        │          yaml_wrapper.rb
+        │          
+        ├─plugins
+        │  ├─beep
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          beep.rb
+        │  │          
+        │  ├─bullseye
+        │  │  │  bullseye.rake
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─assets
+        │  │  │      template.erb
+        │  │  │      
+        │  │  ├─config
+        │  │  │      defaults.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          bullseye.rb
+        │  │          
+        │  ├─colour_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          colour_report.rb
+        │  │          
+        │  ├─command_hooks
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          command_hooks.rb
+        │  │          
+        │  ├─compile_commands_json
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          compile_commands_json.rb
+        │  │          
+        │  ├─dependencies
+        │  │  │  dependencies.rake
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─config
+        │  │  │      defaults.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          dependencies.rb
+        │  │          
+        │  ├─fake_function_framework
+        │  │  │  Rakefile
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─examples
+        │  │  │  └─fff_example
+        │  │  │      │  project.yml
+        │  │  │      │  rakefile.rb
+        │  │  │      │  
+        │  │  │      ├─src
+        │  │  │      │  │  bar.c
+        │  │  │      │  │  bar.h
+        │  │  │      │  │  custom_types.h
+        │  │  │      │  │  display.c
+        │  │  │      │  │  display.h
+        │  │  │      │  │  event_processor.c
+        │  │  │      │  │  event_processor.h
+        │  │  │      │  │  foo.c
+        │  │  │      │  │  foo.h
+        │  │  │      │  │  
+        │  │  │      │  └─subfolder
+        │  │  │      │          zzz.c
+        │  │  │      │          zzz.h
+        │  │  │      │          
+        │  │  │      └─test
+        │  │  │              test_event_processor.c
+        │  │  │              test_foo.c
+        │  │  │              
+        │  │  ├─lib
+        │  │  │      fake_function_framework.rb
+        │  │  │      fff_mock_generator.rb
+        │  │  │      
+        │  │  ├─spec
+        │  │  │      fff_mock_header_generator_spec.rb
+        │  │  │      fff_mock_source_generator_spec.rb
+        │  │  │      header_generator.rb
+        │  │  │      spec_helper.rb
+        │  │  │      
+        │  │  └─src
+        │  │          fff_unity_helper.h
+        │  │          
+        │  ├─gcov
+        │  │  │  gcov.rake
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─assets
+        │  │  │      template.erb
+        │  │  │      
+        │  │  ├─config
+        │  │  │      defaults_gcov.rb
+        │  │  │      
+        │  │  └─lib
+        │  │          gcov.rb
+        │  │          gcovr_reportinator.rb
+        │  │          gcov_constants.rb
+        │  │          reportgenerator_reportinator.rb
+        │  │          reportinator_helper.rb
+        │  │          
+        │  ├─json_tests_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          json_tests_report.rb
+        │  │          
+        │  ├─junit_tests_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          junit_tests_report.rb
+        │  │          
+        │  ├─module_generator
+        │  │  │  module_generator.rake
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─config
+        │  │  │      module_generator.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          module_generator.rb
+        │  │          
+        │  ├─raw_output_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          raw_output_report.rb
+        │  │          
+        │  ├─stdout_gtestlike_tests_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─assets
+        │  │  │      template.erb
+        │  │  │      template.erb copy
+        │  │  │      
+        │  │  ├─config
+        │  │  │      stdout_gtestlike_tests_report.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          stdout_gtestlike_tests_report.rb
+        │  │          
+        │  ├─stdout_ide_tests_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─config
+        │  │  │      stdout_ide_tests_report.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          stdout_ide_tests_report.rb
+        │  │          
+        │  ├─stdout_pretty_tests_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─assets
+        │  │  │      template.erb
+        │  │  │      
+        │  │  ├─config
+        │  │  │      stdout_pretty_tests_report.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          stdout_pretty_tests_report.rb
+        │  │          
+        │  ├─subprojects
+        │  │  │  README.md
+        │  │  │  subprojects.rake
+        │  │  │  
+        │  │  ├─config
+        │  │  │      defaults.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          subprojects.rb
+        │  │          
+        │  ├─teamcity_tests_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  ├─config
+        │  │  │      teamcity_tests_report.yml
+        │  │  │      
+        │  │  └─lib
+        │  │          teamcity_tests_report.rb
+        │  │          
+        │  ├─warnings_report
+        │  │  │  README.md
+        │  │  │  
+        │  │  └─lib
+        │  │          warnings_report.rb
+        │  │          
+        │  └─xml_tests_report
+        │      │  README.md
+        │      │  
+        │      └─lib
+        │              xml_tests_report.rb
+        │              
+        └─vendor
+            ├─cmock
+            │  ├─config
+            │  │      production_environment.rb
+            │  │      test_environment.rb
+            │  │      
+            │  ├─lib
+            │  │      cmock.rb
+            │  │      cmock_config.rb
+            │  │      cmock_file_writer.rb
+            │  │      cmock_generator.rb
+            │  │      cmock_generator_plugin_array.rb
+            │  │      cmock_generator_plugin_callback.rb
+            │  │      cmock_generator_plugin_cexception.rb
+            │  │      cmock_generator_plugin_expect.rb
+            │  │      cmock_generator_plugin_expect_any_args.rb
+            │  │      cmock_generator_plugin_ignore.rb
+            │  │      cmock_generator_plugin_ignore_arg.rb
+            │  │      cmock_generator_plugin_ignore_stateless.rb
+            │  │      cmock_generator_plugin_return_thru_ptr.rb
+            │  │      cmock_generator_utils.rb
+            │  │      cmock_header_parser.rb
+            │  │      cmock_plugin_manager.rb
+            │  │      cmock_unityhelper_parser.rb
+            │  │      
+            │  └─src
+            │          cmock.c
+            │          cmock.h
+            │          cmock_internals.h
+            │          meson.build
+            │          
+            ├─c_exception
+            │  └─lib
+            │          CException.c
+            │          CException.h
+            │          meson.build
+            │          
+            ├─diy
+            │  └─lib
+            │      │  diy.rb
+            │      │  
+            │      └─diy
+            │              factory.rb
+            │              
+            └─unity
+                ├─auto
+                │      colour_prompt.rb
+                │      colour_reporter.rb
+                │      generate_config.yml
+                │      generate_module.rb
+                │      generate_test_runner.rb
+                │      parse_output.rb
+                │      run_test.erb
+                │      stylize_as_junit.rb
+                │      test_file_filter.rb
+                │      type_sanitizer.rb
+                │      unity_test_summary.py
+                │      unity_test_summary.rb
+                │      unity_to_junit.py
+                │      
+                └─src
+                        meson.build
+                        unity.c
+                        unity.h
+                        unity_internals.h
+                        

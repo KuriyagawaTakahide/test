@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <setjmp.h>
 #include "cmock.h"
-#include "cmsis_iccarm.h"
 #include "mock_dose_something.h"
 
 static const char* CMockString_DoesSomething = "DoesSomething";
@@ -35,7 +34,7 @@ typedef struct _CMOCK_DoesSomething2_CALL_INSTANCE
   int* Expected_c;
   int Expected_c_Depth;
   char ReturnThruPtr_c_Used;
-  int const* ReturnThruPtr_c_Val;
+  int* ReturnThruPtr_c_Val;
   size_t ReturnThruPtr_c_Size;
   char IgnoreArg_a;
   char IgnoreArg_c;
@@ -165,24 +164,15 @@ void CMockExpectParameters_DoesSomething(CMOCK_DoesSomething_CALL_INSTANCE* cmoc
   cmock_call_instance->IgnoreArg_b = 0;
 }
 
-void DoesSomething_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return)
+void DoesSomething_CMockIgnoreAndReturn(int cmock_to_return)
 {
-  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_DoesSomething_CALL_INSTANCE));
-  CMOCK_DoesSomething_CALL_INSTANCE* cmock_call_instance = (CMOCK_DoesSomething_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
-  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
-  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
-  Mock.DoesSomething_CallInstance = CMock_Guts_MemChain(Mock.DoesSomething_CallInstance, cmock_guts_index);
-  Mock.DoesSomething_IgnoreBool = (char)0;
-  cmock_call_instance->LineNumber = cmock_line;
-  cmock_call_instance->ExpectAnyArgsBool = (char)0;
-  cmock_call_instance->ReturnVal = cmock_to_return;
+  Mock.DoesSomething_CallInstance = CMOCK_GUTS_NONE;
+  Mock.DoesSomething_FinalReturn = cmock_to_return;
   Mock.DoesSomething_IgnoreBool = (char)1;
 }
 
 void DoesSomething_CMockStopIgnore(void)
 {
-  if(Mock.DoesSomething_IgnoreBool)
-    Mock.DoesSomething_CallInstance = CMock_Guts_MemNext(Mock.DoesSomething_CallInstance);
   Mock.DoesSomething_IgnoreBool = (char)0;
 }
 
@@ -218,14 +208,12 @@ void DoesSomething_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int a, int b
 
 void DoesSomething_AddCallback(CMOCK_DoesSomething_CALLBACK Callback)
 {
-  Mock.DoesSomething_IgnoreBool = (char)0;
   Mock.DoesSomething_CallbackBool = (char)1;
   Mock.DoesSomething_CallbackFunctionPointer = Callback;
 }
 
 void DoesSomething_Stub(CMOCK_DoesSomething_CALLBACK Callback)
 {
-  Mock.DoesSomething_IgnoreBool = (char)0;
   Mock.DoesSomething_CallbackBool = (char)0;
   Mock.DoesSomething_CallbackFunctionPointer = Callback;
 }
@@ -295,7 +283,7 @@ int DoesSomething2(int a, int* c)
   if (cmock_call_instance->ReturnThruPtr_c_Used)
   {
     UNITY_TEST_ASSERT_NOT_NULL(c, cmock_line, CMockStringPtrIsNULL);
-    memcpy((void*)c, (const void*)cmock_call_instance->ReturnThruPtr_c_Val,
+    memcpy((void*)c, (void*)cmock_call_instance->ReturnThruPtr_c_Val,
       cmock_call_instance->ReturnThruPtr_c_Size);
   }
   UNITY_CLR_DETAILS();
@@ -313,24 +301,15 @@ void CMockExpectParameters_DoesSomething2(CMOCK_DoesSomething2_CALL_INSTANCE* cm
   cmock_call_instance->ReturnThruPtr_c_Used = 0;
 }
 
-void DoesSomething2_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return)
+void DoesSomething2_CMockIgnoreAndReturn(int cmock_to_return)
 {
-  CMOCK_MEM_INDEX_TYPE cmock_guts_index = CMock_Guts_MemNew(sizeof(CMOCK_DoesSomething2_CALL_INSTANCE));
-  CMOCK_DoesSomething2_CALL_INSTANCE* cmock_call_instance = (CMOCK_DoesSomething2_CALL_INSTANCE*)CMock_Guts_GetAddressFor(cmock_guts_index);
-  UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringOutOfMemory);
-  memset(cmock_call_instance, 0, sizeof(*cmock_call_instance));
-  Mock.DoesSomething2_CallInstance = CMock_Guts_MemChain(Mock.DoesSomething2_CallInstance, cmock_guts_index);
-  Mock.DoesSomething2_IgnoreBool = (char)0;
-  cmock_call_instance->LineNumber = cmock_line;
-  cmock_call_instance->ExpectAnyArgsBool = (char)0;
-  cmock_call_instance->ReturnVal = cmock_to_return;
+  Mock.DoesSomething2_CallInstance = CMOCK_GUTS_NONE;
+  Mock.DoesSomething2_FinalReturn = cmock_to_return;
   Mock.DoesSomething2_IgnoreBool = (char)1;
 }
 
 void DoesSomething2_CMockStopIgnore(void)
 {
-  if(Mock.DoesSomething2_IgnoreBool)
-    Mock.DoesSomething2_CallInstance = CMock_Guts_MemNext(Mock.DoesSomething2_CallInstance);
   Mock.DoesSomething2_IgnoreBool = (char)0;
 }
 
@@ -366,14 +345,12 @@ void DoesSomething2_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int a, int*
 
 void DoesSomething2_AddCallback(CMOCK_DoesSomething2_CALLBACK Callback)
 {
-  Mock.DoesSomething2_IgnoreBool = (char)0;
   Mock.DoesSomething2_CallbackBool = (char)1;
   Mock.DoesSomething2_CallbackFunctionPointer = Callback;
 }
 
 void DoesSomething2_Stub(CMOCK_DoesSomething2_CALLBACK Callback)
 {
-  Mock.DoesSomething2_IgnoreBool = (char)0;
   Mock.DoesSomething2_CallbackBool = (char)0;
   Mock.DoesSomething2_CallbackFunctionPointer = Callback;
 }
@@ -393,7 +370,7 @@ void DoesSomething2_CMockExpectWithArrayAndReturn(UNITY_LINE_TYPE cmock_line, in
   cmock_call_instance->ReturnVal = cmock_to_return;
 }
 
-void DoesSomething2_CMockReturnMemThruPtr_c(UNITY_LINE_TYPE cmock_line, int const* c, size_t cmock_size)
+void DoesSomething2_CMockReturnMemThruPtr_c(UNITY_LINE_TYPE cmock_line, int* c, size_t cmock_size)
 {
   CMOCK_DoesSomething2_CALL_INSTANCE* cmock_call_instance = (CMOCK_DoesSomething2_CALL_INSTANCE*)CMock_Guts_GetAddressFor(CMock_Guts_MemEndOfChain(Mock.DoesSomething2_CallInstance));
   UNITY_TEST_ASSERT_NOT_NULL(cmock_call_instance, cmock_line, CMockStringPtrPreExp);

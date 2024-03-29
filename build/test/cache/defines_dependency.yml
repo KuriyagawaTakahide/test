@@ -1,11 +1,7 @@
 ---
+build/test/mocks/mock_dose_something.c:
+- TEST
 src/method.c:
 - TEST
 src/components/libraries/strerror/nrf_strerror.c:
-- TEST
-src/components/boards/boards.c:
-- TEST
-build/test/mocks/mock_nrf_gpio.c:
-- TEST
-build/test/mocks/mock_dose_something.c:
 - TEST

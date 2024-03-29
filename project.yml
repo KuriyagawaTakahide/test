@@ -10,13 +10,8 @@
   :use_test_preprocessor: FALSE
   :use_auxiliary_dependencies: TRUE
   :build_root: build
-  #:release_build: FALSE
+  :release_build: FALSE
   :test_file_prefix: test_
-  :which_ceedling: gem
-  :ceedling_version: 0.31.1
-  :default_tasks:
-    - test:all
-
 
 :environment:
   - :path:
@@ -25,9 +20,6 @@
     - #{ENV['PATH']}
   - :executable:
     - 'C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\iarbuild.exe'
-
-:extension:
-  :executable: .out
 
 :paths:
   :test:
@@ -57,7 +49,7 @@
   :enforce_strict_ordering: TRUE
   :cexception_include:
   :plugins:
-    - :ignore
+    - :ignore_stateless
     - :callback
     - :array
     - :ignore_arg
@@ -69,13 +61,7 @@
     uint32_t:   UINT32
     int8_t:     INT8
     bool:     UINT8
-  :treat_inline: include
-  :includes:
-    - cmsis_iccarm.h
-  :includes_h_pre_orig_header: 
-    - cmsis_iccarm.h
-  :includes_c_pre_header: 
-    - cmsis_iccarm.h
+    
   
 :tools:
   :test_compiler:
