@@ -7,9 +7,9 @@ pipeline {
                 bat "build.bat"
             }
         }
-        stage('test') {
+        stage('unit_test') {
             steps {
-                echo 'testing'
+                ceedling
             }
         }
     }
