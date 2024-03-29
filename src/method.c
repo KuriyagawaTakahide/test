@@ -1,4 +1,3 @@
-#include "type_struct.h"
 #include "method.h"
 #include "dose_something.h"
 

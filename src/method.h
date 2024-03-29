@@ -1,6 +1,8 @@
 #ifndef METHOD_H
 #define METHOD_H
 
+#include "type_struct.h"
+
 typedef enum CALCU_METHOD{
 	CALCU_METHOD_ADD = 0,
 	CALCU_METHOD_SUB,
