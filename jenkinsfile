@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                ./build.bat
+                bat "build.bat ${pipelineParams.buildBatArgument}"
             }
         }
         stage('test') {
