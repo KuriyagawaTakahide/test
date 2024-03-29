@@ -24,7 +24,6 @@
 :paths:
   :test:
     - +:test/**
-    - +:test/components/boards/**
     - +:test/components/libraries/strerror/**
     - -:test/support
   :source:
