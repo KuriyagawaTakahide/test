@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('build') {
+            steps {
+                call build.bat
+            }
+        }
+        stage('test') {
+            steps {
+                echo 'testing'
+            }
+        }
+    }
+}
