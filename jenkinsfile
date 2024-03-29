@@ -9,7 +9,7 @@ pipeline {
         }
         stage('unit_test') {
             steps {
-                ceedling
+                bat "unit_test.bat"
             }
         }
     }
